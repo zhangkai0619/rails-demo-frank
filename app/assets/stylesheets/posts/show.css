@@ -1,0 +1,20 @@
+#posts-show {
+  padding: 16px;
+  margin: 5%;
+  border: 1px solid #aaa;
+}
+
+#posts-show h1 {
+  margin: 0 0 16px 0;
+}
+
+#posts-show .metadata {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #aaa;
+  font-size: 11px;
+}
+
+#posts-show .comments h2 {
+  margin: 0;
+}

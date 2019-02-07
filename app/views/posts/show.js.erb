@@ -1,0 +1,9 @@
+var delimiter =
+        $('<div class="page-delimiter" data-page="<%= params[:page] %>"></div>');
+$('#infinite-scrolling').append(delimiter);
+$('#infinite-scrolling2').append('<%= j render "comment" %>');
+<% if @comments_p.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate @comments_p %>');
+<% else %>
+$('#infinite-scrolling .pagination').remove();
+<% end %>

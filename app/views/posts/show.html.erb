@@ -1,0 +1,31 @@
+
+
+<html>
+<div id="posts-show">
+ <h1><%= @post.title %></h1>
+  <div class="metadata">by: <strong><%= @post.user.name %></strong> at <%= format_timestamp(@post.created_at) %></div>
+  <div class="content">
+    <%= @post.content.html_safe %>
+  </div>
+  <div class="comments">
+    <h2>Comments</h2>
+
+
+  <div id="infinite-scrolling">
+    <%= will_paginate @comments_p %>
+  </div>
+
+<%= render "comment" %>
+
+  <div id="infinite-scrolling2">
+    <%= will_paginate @comments_p %>
+  </div>
+
+  </div>
+</div>
+
+
+</html>
+
+
+

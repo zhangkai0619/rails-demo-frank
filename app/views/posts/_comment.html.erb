@@ -1,0 +1,15 @@
+      <div class="content">
+        <% @comments_p.each do |comment| %>
+          <p style="font-size:125%;">
+            <%= comment.content %>
+          </p>
+         by: 
+         <strong>
+          <%= comment.user.name %>
+         </strong>
+         at: 
+        <%= format_timestamp(comment.created_at) %> 
+        <br />
+        <hr>
+        <% end %>
+      </div>
