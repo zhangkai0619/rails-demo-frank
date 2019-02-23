@@ -1,6 +1,9 @@
 
 
 <html>
+<div id="time-stamp">
+  current page refresh time is <%= Time.now.getutc%>
+</div>
 <div id="posts-show">
  <h1><%= @post.title %></h1>
   <div class="metadata">by: <strong><%= @post.user.name %></strong> at <%= format_timestamp(@post.created_at) %></div>
